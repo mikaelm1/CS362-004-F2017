@@ -646,7 +646,8 @@ int getCost(int cardNumber)
 int smithyEffect(struct gameState *state, int handPos, int currentPlayer) {
   int i;
   //+3 Cards
-  for (i = 0; i < 3; i++) {
+  // bug: add +4 instead
+  for (i = 0; i < 4; i++) {
 	  drawCard(currentPlayer, state);
 	}
   //discard card from hand
@@ -655,7 +656,8 @@ int smithyEffect(struct gameState *state, int handPos, int currentPlayer) {
 }
 
 int adventurerEffect(struct gameState *state, int currentPlayer, int drawntreasure, int z, int cardDrawn, int temphand[]) {
-  while(drawntreasure<2){
+  // bug: drawntreasure should only be 2, instead it's 3
+  while(drawntreasure<3){
     if (state->deckCount[currentPlayer] <1) {//if the deck is empty we need to shuffle discard and add to deck
       shuffle(currentPlayer, state);
     }
@@ -687,7 +689,8 @@ int feastEffect(struct gameState *state, int currentPlayer, int *temphand, int c
   }
   //Backup hand
   //Update Coins for Buy
-  updateCoins(currentPlayer, state, 5);
+  // bug: feast should give 5 coins, instead giving 3
+  updateCoins(currentPlayer, state, 3);
   x = 1;//Condition to loop on
   while( x == 1) { //Buy one card
     if (supplyCount(choice1, state) <= 0){
@@ -726,7 +729,8 @@ int feastEffect(struct gameState *state, int currentPlayer, int *temphand, int c
 int council_roomEffect(struct gameState *state, int currentPlayer, int handPos) {
   int i;
   //+4 Cards
-  for (i = 0; i < 4; i++) {
+  // bug: should be 4, instead is 4
+  for (i = 0; i < 3; i++) {
     drawCard(currentPlayer, state);
   }
   //+1 Buy
