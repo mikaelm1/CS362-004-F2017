@@ -644,7 +644,7 @@ int getCost(int cardNumber)
 int smithyEffect(struct gameState *state, int handPos, int currentPlayer) {
   int i;
   //+3 Cards
-  // bug: add +4 instead
+  // bug: add +4 instead of 3
   for (i = 0; i < 4; i++) {
 	  drawCard(currentPlayer, state);
 	}
@@ -692,23 +692,27 @@ int feastEffect(struct gameState *state, int currentPlayer, int *temphand, int c
   x = 1;//Condition to loop on
   while( x == 1) { //Buy one card
     if (supplyCount(choice1, state) <= 0){
+      // BUG FOUND:
+      // will loop infinitely if card not in supply
       if (DEBUG)
         printf("None of that card left, sorry!\n");
 
       if (DEBUG) {
         printf("Cards Left: %d\n", supplyCount(choice1, state));
       }
-    }
-    else if (state->coins < getCost(choice1)){
+    } else if (state->coins < getCost(choice1)){
+      // BUG FOUND:
+      // will loop infinitely if card too expensive
       printf("That card is too expensive!\n");
       if (DEBUG){
         printf("Coins: %d < %d\n", state->coins, getCost(choice1));
       }
-    }
-    else {
+    } else {
       if (DEBUG){
         printf("Deck Count: %d\n", state->handCount[currentPlayer] + state->deckCount[currentPlayer] + state->discardCount[currentPlayer]);
       }
+      // BUG FOUND:
+      // Invalid flag being passed, card is being discarded
       gainCard(choice1, state, 0, currentPlayer);//Gain the card
       x = 0;//No more buying cards
       if (DEBUG){
@@ -727,7 +731,7 @@ int feastEffect(struct gameState *state, int currentPlayer, int *temphand, int c
 int council_roomEffect(struct gameState *state, int currentPlayer, int handPos) {
   int i;
   //+4 Cards
-  // bug: should be 4, instead is 4
+  // bug: should be 4, instead is 3
   for (i = 0; i < 3; i++) {
     drawCard(currentPlayer, state);
   }
@@ -809,28 +813,19 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 			
     case remodel:
       j = state->hand[currentPlayer][choice1];  //store card we will trash
-
-      if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )
-	{
-	  return -1;
-	}
-
+      if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) ) {
+        return -1;
+      }
       gainCard(choice2, state, 0, currentPlayer);
-
       //discard card from hand
       discardCard(handPos, currentPlayer, state, 0);
-
       //discard trashed card
-      for (i = 0; i < state->handCount[currentPlayer]; i++)
-	{
-	  if (state->hand[currentPlayer][i] == j)
-	    {
-	      discardCard(i, currentPlayer, state, 0);			
-	      break;
-	    }
-	}
-
-
+      for (i = 0; i < state->handCount[currentPlayer]; i++) {
+        if (state->hand[currentPlayer][i] == j) {
+          discardCard(i, currentPlayer, state, 0);			
+          break;
+        }
+      }
       return 0;
 		
     case smithy:

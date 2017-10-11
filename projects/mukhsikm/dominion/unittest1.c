@@ -6,7 +6,7 @@
 #include "dominion_helpers.h"
 
 int main() {
-    printf("Testing getCost() ----------------------------------\n");
+    printf("Testing getCost()\n");
     // Run tests for a few random cards
     int cost = getCost(curse);
     if (cost == 0) {
