@@ -35,7 +35,7 @@ int main() {
     previousPlayedCount = state.playedCardCount;
     // played count should not change when trashing card
     if (state.playedCardCount == previousPlayedCount) {
-        printf("discardCard(): PAS played count unchnaged when trashing\n");
+        printf("discardCard(): PASS played count unchnaged when trashing\n");
     } else {
         printf("discardCard(): FAIL played count changed when trashing\n");
     }

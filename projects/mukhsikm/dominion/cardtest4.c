@@ -20,7 +20,7 @@ int main() {
     initializeGame(2, k, randomSeed, &state);
     int prevHandCount = state.handCount[player];
     int prevHandCountOtherPlayer = state.handCount[otherPlayer];
-    printf("%d\n", prevHandCount);
+    // printf("%d\n", prevHandCount);
     int prevBuy = state.numBuys;
     cardEffect(council_room, choice1, choice2, choice3, &state, handPos, &bonus);
     if (state.numBuys == prevBuy + 1) {

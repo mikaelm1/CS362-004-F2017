@@ -23,7 +23,7 @@ int main() {
     // feast supposed to give 5 coins to player and let player
     // purchase one card
     cardEffect(feast, choice1, choice2, choice3, &state, handPos, &bonus);
-    printf("%d\n", state.coins);
+    // printf("%d\n", state.coins);
     if (state.coins == 5) {
         printf("feast: PASS 5 coins added\n");
     } else {
