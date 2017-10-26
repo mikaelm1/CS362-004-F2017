@@ -25,10 +25,10 @@ int main() {
     for (i=0; i<5000; i++) {
         randomSeed = floor(Random() * 500 + 1);
         initializeGame(numPlayers, k, randomSeed, &state);
+        player = floor(Random() * numPlayers);
         state.deckCount[player] = floor(Random() * MAX_DECK);
         state.discardCount[player] = floor(Random() * MAX_DECK);
         state.handCount[player] = floor(Random() * MAX_HAND);
-        player = floor(Random() * numPlayers);
         handPos = floor(Random() * state.handCount[player]);
         int prevHandCount = state.handCount[player];
         int prevDeckCount = state.deckCount[player];

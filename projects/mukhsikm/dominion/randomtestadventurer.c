@@ -44,7 +44,7 @@ int main() {
         // printf("Hand count: %d\n", state.handCount[player]);
         // printf("Top card: %d\n", state.hand[player][state.handCount[player]-1]);
         pre.handCount[player] += 2;
-        printf("pre hand count: %d\n", pre.handCount[player]);
+        // printf("pre hand count: %d\n", pre.handCount[player]);
         if (pre.handCount[player] != state.handCount[player]) {
             printf("FAIL expected hand count=%d got=%d\n", pre.handCount[player], state.handCount[player]);
         } else {
