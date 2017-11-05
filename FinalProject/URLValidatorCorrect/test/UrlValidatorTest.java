@@ -91,9 +91,11 @@ public class UrlValidatorTest extends TestCase {
       if (printIndex)  {
          statusPerLine = 6;
       }
+      int numTestsRan = 0;
       do {
          StringBuffer testBuffer = new StringBuffer();
          boolean expected = true;
+         // testPartsIndex is 5 long, number of testObjects
          for (int testPartsIndexIndex = 0; testPartsIndexIndex < testPartsIndex.length; ++testPartsIndexIndex) {
             int index = testPartsIndex[testPartsIndexIndex];
             ResultPair[] part = (ResultPair[]) testObjects[testPartsIndexIndex];
@@ -103,6 +105,7 @@ public class UrlValidatorTest extends TestCase {
          //System.out.println(testPartsIndex[0]);
          String url = testBuffer.toString();
          boolean result = urlVal.isValid(url);
+         numTestsRan++;
          
          if(result == true)
         	 System.out.println(url);
@@ -128,6 +131,7 @@ public class UrlValidatorTest extends TestCase {
       if (printStatus) {
          System.out.println();
       }
+       System.out.println("Number of tests ran: " + numTestsRan);
    }
 
    public void testValidator202() {
