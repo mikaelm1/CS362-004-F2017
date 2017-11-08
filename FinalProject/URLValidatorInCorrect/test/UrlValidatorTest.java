@@ -20,8 +20,6 @@ import junit.framework.TestCase;
 
 
 
-
-
 /**
  * Performs Validation Test for url validations.
  *
