@@ -6,9 +6,9 @@ getCost(); PASS when card is gold
 getCost(); PASS when card is gardens
 getCost(); PASS when card is ambassador
 File 'dominion.c'
-Lines executed:0.93% of 643
-Branches executed:6.71% of 417
-Taken at least once:0.96% of 417
+Lines executed:25.47% of 644
+Branches executed:30.22% of 417
+Taken at least once:19.90% of 417
 No calls
 dominion.c:creating 'dominion.c.gcov'
 
@@ -18,9 +18,9 @@ isGameOver(): PASS before making moves
 isGameOver(): PASS when province count is 0
 isGameOver(): PASS when 3 pile count is 0
 File 'dominion.c'
-Lines executed:19.28% of 643
-Branches executed:24.94% of 417
-Taken at least once:15.83% of 417
+Lines executed:27.64% of 644
+Branches executed:32.13% of 417
+Taken at least once:22.06% of 417
 No calls
 dominion.c:creating 'dominion.c.gcov'
 
@@ -30,9 +30,9 @@ drawCard(): PASS hand count incremented
 drawCard(): PASS deck count decremented
 drawCard(): PASS when deck empty before drawing
 File 'dominion.c'
-Lines executed:20.84% of 643
-Branches executed:25.90% of 417
-Taken at least once:16.79% of 417
+Lines executed:27.64% of 644
+Branches executed:32.13% of 417
+Taken at least once:22.06% of 417
 No calls
 dominion.c:creating 'dominion.c.gcov'
 
@@ -42,9 +42,9 @@ discardCard(): PASS played card count incremented
 discardCard(): PASS hand count decremented
 discardCard(): PASS played count unchnaged when trashing
 File 'dominion.c'
-Lines executed:22.55% of 643
-Branches executed:27.34% of 417
-Taken at least once:17.75% of 417
+Lines executed:27.64% of 644
+Branches executed:32.13% of 417
+Taken at least once:22.30% of 417
 No calls
 dominion.c:creating 'dominion.c.gcov'
 
@@ -53,9 +53,9 @@ Testing card smithy
 smithy: FAIL hand count=8 expected=7
 smithy: FAIL deck count=1 expected=2
 File 'dominion.c'
-Lines executed:24.88% of 643
-Branches executed:33.33% of 417
-Taken at least once:18.71% of 417
+Lines executed:29.19% of 644
+Branches executed:37.65% of 417
+Taken at least once:22.78% of 417
 No calls
 dominion.c:creating 'dominion.c.gcov'
 
@@ -65,9 +65,9 @@ adventurer: FAIL hand count=8 expected=7
 adventurer: PASS last card is treasure
 adventurer: PASS before last card is treasure
 File 'dominion.c'
-Lines executed:27.06% of 643
-Branches executed:36.21% of 417
-Taken at least once:21.10% of 417
+Lines executed:29.35% of 644
+Branches executed:37.65% of 417
+Taken at least once:23.02% of 417
 No calls
 dominion.c:creating 'dominion.c.gcov'
 
@@ -78,9 +78,9 @@ feast: PASS hand count unchanged
 feast: PASS supply count decremented
 feast: FAIL village not purchased
 File 'dominion.c'
-Lines executed:31.26% of 643
-Branches executed:40.05% of 417
-Taken at least once:24.22% of 417
+Lines executed:33.54% of 644
+Branches executed:41.49% of 417
+Taken at least once:26.14% of 417
 No calls
 dominion.c:creating 'dominion.c.gcov'
 
@@ -90,9 +90,9 @@ council room: PASS number of buys incremented
 council room: FAIL player hand count expected=8 got=7
 council room: PASS other player hand count expected=1 got=1
 File 'dominion.c'
-Lines executed:34.37% of 643
+Lines executed:34.94% of 644
 Branches executed:41.49% of 417
-Taken at least once:26.62% of 417
+Taken at least once:27.10% of 417
 No calls
 dominion.c:creating 'dominion.c.gcov'
 
