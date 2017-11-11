@@ -25,14 +25,17 @@ int main() {
     int numPlayers = 4;
     int tempHand[MAX_HAND]; 
     int drawnTreasure = 2;
-	int cardDrawn = 0;
-	int bonus = 0;
-    int i, j;
+    int cardDrawn = 0;
+    int z;  // this is the counter for the temp hand
+	int i, j;
+	int handPos = 0;
+    int choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
 
     SelectStream(2);
     PutSeed(3);
     
     for (i=0; i<50000; i++) {
+        z = 0;
         drawnTreasure = floor(Random() * 3);
         randomSeed = floor(Random() * 500 + 1);
         initializeGame(numPlayers, k, randomSeed, &state);
@@ -40,7 +43,8 @@ int main() {
         struct gameState pre;
         memcpy (&pre, &state, sizeof(struct gameState));
 		// adventurerEffect(&state, player, drawnTreasure, z, cardDrawn, tempHand);
-		cardEffect(adventurer, 0, 0, 0, &state, 0, &bonus); 
+		adventurerCard(player, &state, handPos, drawnTreasure);
+		// cardEffect(adventurer, choice1, choice2, choice3, &state, handPos, &bonus);
         // printf("Hand count: %d\n", state.handCount[player]);
         // printf("Top card: %d\n", state.hand[player][state.handCount[player]-1]);
         pre.handCount[player] += 2;
@@ -67,4 +71,3 @@ int main() {
 
     return 0;
 }
- 

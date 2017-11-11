@@ -26,10 +26,10 @@ int main() {
     int randomSeed = 5;
     int player = 0;
     int otherPlayer = 0;
-	int numPlayers = 4;
-	int bonus = 0;
+    int numPlayers = 4;
     int i;
-    int handPos;
+	int handPos;
+	int choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     
     for (i=0; i<5000; i++) {
         randomSeed = floor(Random() * 500 + 1);
@@ -45,7 +45,7 @@ int main() {
         int prevBuy = state.numBuys;
         // printf("handPos %d\n", handPos);
 		// council_roomEffect(&state, player, handPos);
-		cardEffect(council_room, 0, 0, 0, &state, 0, &bonus); 
+		cardEffect(council_room, choice1, choice2, choice3, &state, handPos, &bonus);
         // smithy adds 3 cards to hand but smithy card is discarded
         if (state.numBuys == prevBuy + 1) {
             printf("PASS number of buys incremented\n");
@@ -67,4 +67,3 @@ int main() {
 
     return 0;
 }
- 

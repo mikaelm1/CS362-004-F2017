@@ -14,8 +14,7 @@ int main() {
         sea_hag, tribute, smithy};
     int randomSeed = 5;
     int player = 0;
-	int numPlayers = 4;
-	int bonus = 0;
+    int numPlayers = 4;
     int i;
     int handPos;
 
@@ -35,7 +34,7 @@ int main() {
         int prevDeckCount = state.deckCount[player];
         // printf("handPos %d\n", handPos);
 		// smithyEffect(&state, handPos, player);
-		cardEffect(smithy, 0, 0, 0, &state, 0, &bonus); 
+		smithyCard(player, &state, handPos);
         // smithy adds 3 cards to hand but smithy card is discarded
         if (prevHandCount + 2 == state.handCount[player]) {
             printf("PASS hand count increased by 3\n");
