@@ -18,6 +18,7 @@
 
 import junit.framework.TestCase;
 
+import java.util.Random;
 
 
 /**
@@ -57,22 +58,93 @@ public class UrlValidatorTest extends TestCase {
    
    public void testIsValid()
    {
-	   for(int i = 0;i<10000;i++)
-	   {
-		   
-	   }
+       UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
+       Random random = new Random();
+       String[] invalidSchemes = getInvalidSchemes();
+       String[] validHosts = getValidHosts();
+       // test with invalid schemes
+       for (int i = 0; i<invalidSchemes.length; i++) {
+            int randomIdx = random.nextInt(validHosts.length);
+           //System.out.println(randomIdx);
+           String url = invalidSchemes[i] + validHosts[randomIdx];
+           //System.out.println(url);
+           assertFalse(urlValidator.isValid(url));
+       }
+       String[] invalidHosts = getInvalidHosts();
+       String[] validSchemes = getValidSchemes();
+       // test with invalid hosts
+       for (int i = 0; i < invalidHosts.length; i++) {
+           int randomIdx = random.nextInt(validSchemes.length);
+           String url = invalidHosts[i] + validSchemes[randomIdx];
+           assertFalse(urlValidator.isValid(url));
+       }
+       // test with valid schemes and hosts
+       for (int i = 0; i < validSchemes.length; i++) {
+           for (int j = 0; j < validHosts.length; j++) {
+               String url = validSchemes[i] + validHosts[j];
+               assertTrue(urlValidator.isValid(url));
+           }
+       }
+       // test with invalid paths
+       String[] invalidPaths = getInvalidPaths();
+       for (int i = 0; i < invalidPaths.length; i++) {
+           String url = validSchemes[0] + validHosts[0] + invalidPaths[i];
+           assertFalse(urlValidator.isValid(url));
+       }
+       // test with valid paths
+       String[] validPaths = getValidPaths();
+       for (int i = 0; i < validPaths.length; i++) {
+           String url = validSchemes[0] + validHosts[0] + validPaths[i];
+           assertTrue(urlValidator.isValid(url));
+       }
    }
    
    public void testAnyOtherUnitTest()
    {
 	   
    }
+
+    public String[] getSchemes() {
+        String[] schemes = {"http://", "https://"};
+        return schemes;
+    }
+
+    public String[] getInvalidSchemes() {
+       String[] schemes = {"boom//", "htp:/", "htps//", "1ttt://"};
+       return schemes;
+    }
+
+    public String[] getValidSchemes() {
+       String[] schemes = {"http://", "ftp://", "https://"};
+       return schemes;
+    }
+
+    public String[] getValidHosts() {
+       String[] hosts = {"google.com", "apple.com", "www.osu.org"};
+       return hosts;
+    }
+
+    public String[] getInvalidHosts() {
+       String[] hosts = {"aaa", "bbb", "123", "1.2.3.4"};
+       return hosts;
+    }
+
+    public String[] getInvalidPaths() {
+       String[] paths = {"/test//", "../test", "..."};
+       return paths;
+    }
+
+    public String[] getValidPaths() {
+       String[] paths = {"", "/test/", "/test/foo"};
+       return paths;
+    }
+
    /**
     * Create set of tests by taking the testUrlXXX arrays and
     * running through all possible permutations of their combinations.
     *
     * @param testObjects Used to create a url.
     */
-   
+
 
 }
