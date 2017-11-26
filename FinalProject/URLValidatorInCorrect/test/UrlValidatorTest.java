@@ -42,7 +42,6 @@ public class UrlValidatorTest extends TestCase {
 	   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
 	   System.out.println(urlVal.isValid("http://www.amazon.com"));
 	   
-	   
    }
    
    
@@ -62,39 +61,36 @@ public class UrlValidatorTest extends TestCase {
        Random random = new Random();
        String[] invalidSchemes = getInvalidSchemes();
        String[] validHosts = getValidHosts();
-       // test with invalid schemes
-       for (int i = 0; i<invalidSchemes.length; i++) {
-            int randomIdx = random.nextInt(validHosts.length);
-           //System.out.println(randomIdx);
-           String url = invalidSchemes[i] + validHosts[randomIdx];
-           //System.out.println(url);
-           assertFalse(urlValidator.isValid(url));
-       }
        String[] invalidHosts = getInvalidHosts();
        String[] validSchemes = getValidSchemes();
-       // test with invalid hosts
-       for (int i = 0; i < invalidHosts.length; i++) {
-           int randomIdx = random.nextInt(validSchemes.length);
-           String url = invalidHosts[i] + validSchemes[randomIdx];
+       // test with invalid schemes
+       for (int i = 0; i < 5000; i++) {
+           int randomIdxHost = random.nextInt(validHosts.length);
+           int randomIdxScheme = random.nextInt(invalidSchemes.length);
+           //System.out.println(randomIdx);
+           String url = invalidSchemes[randomIdxScheme] + validHosts[randomIdxHost];
+           //System.out.println(url);
            assertFalse(urlValidator.isValid(url));
-       }
-       // test with valid schemes and hosts
-       for (int i = 0; i < validSchemes.length; i++) {
-           for (int j = 0; j < validHosts.length; j++) {
-               String url = validSchemes[i] + validHosts[j];
-               assertTrue(urlValidator.isValid(url));
-           }
-       }
-       // test with invalid paths
-       String[] invalidPaths = getInvalidPaths();
-       for (int i = 0; i < invalidPaths.length; i++) {
-           String url = validSchemes[0] + validHosts[0] + invalidPaths[i];
+           // test with invalid hosts
+           randomIdxScheme = random.nextInt(validSchemes.length);
+           randomIdxHost = random.nextInt(invalidHosts.length);
+           url = invalidHosts[randomIdxHost] + validSchemes[randomIdxScheme];
            assertFalse(urlValidator.isValid(url));
-       }
-       // test with valid paths
-       String[] validPaths = getValidPaths();
-       for (int i = 0; i < validPaths.length; i++) {
-           String url = validSchemes[0] + validHosts[0] + validPaths[i];
+           // test with valid scheme and valid host
+           randomIdxScheme = random.nextInt(validSchemes.length);
+           randomIdxHost = random.nextInt(validHosts.length);
+           url = validSchemes[randomIdxScheme] + validHosts[randomIdxHost];
+           assertTrue(urlValidator.isValid(url));
+           // test with invalid paths
+           String[] invalidPaths = getInvalidPaths();
+           randomIdxScheme = random.nextInt(validSchemes.length);
+           int randomIdxPath = random.nextInt(invalidPaths.length);
+           url = validSchemes[randomIdxScheme] + invalidPaths[randomIdxPath];
+           assertFalse(urlValidator.isValid(url));
+           // test with valid paths
+           String[] validPaths = getValidPaths();
+           randomIdxPath = random.nextInt(validPaths.length);
+           url = validSchemes[randomIdxScheme] + validHosts[randomIdxHost] + validPaths[randomIdxPath];
            assertTrue(urlValidator.isValid(url));
        }
    }
@@ -104,18 +100,13 @@ public class UrlValidatorTest extends TestCase {
 	   
    }
 
-    public String[] getSchemes() {
-        String[] schemes = {"http://", "https://"};
-        return schemes;
-    }
-
     public String[] getInvalidSchemes() {
        String[] schemes = {"boom//", "htp:/", "htps//", "1ttt://"};
        return schemes;
     }
 
     public String[] getValidSchemes() {
-       String[] schemes = {"http://", "ftp://", "https://"};
+       String[] schemes = {"http://", "ftp://", "https://", "boom://"};
        return schemes;
     }
 
