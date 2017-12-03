@@ -92,6 +92,11 @@ public class UrlValidatorTest extends TestCase {
            randomIdxPath = random.nextInt(validPaths.length);
            url = validSchemes[randomIdxScheme] + validHosts[randomIdxHost] + validPaths[randomIdxPath];
            assertTrue(urlValidator.isValid(url));
+           // test with valid ports
+           String[] validPorts = getValidPorts();
+           int randomPortIdx = random.nextInt(validPorts.length);
+           url = validSchemes[randomIdxScheme] + validHosts[randomIdxHost] + validPorts[randomPortIdx];
+           assertTrue("Failed with port" + validPorts[randomPortIdx], urlValidator.isValid(url));
        }
    }
    
@@ -126,8 +131,13 @@ public class UrlValidatorTest extends TestCase {
     }
 
     public String[] getValidPaths() {
-       String[] paths = {"", "/test/", "/test/foo"};
+       String[] paths = {"", "/test/", "/test/foo", "/12"};
        return paths;
+    }
+
+    public String[] getValidPorts() {
+       String[] ports = {":100", ":1", ":8080", ""};
+       return ports;
     }
 
    /**
