@@ -21,8 +21,8 @@
       <file leaf-file-name="DomainValidator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DomainValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+            <state relative-caret-position="76">
+              <caret line="67" column="21" lean-forward="false" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -41,11 +41,12 @@
       <file leaf-file-name="UrlValidatorTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/UrlValidatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="92" column="103" lean-forward="true" selection-start-line="92" selection-start-column="103" selection-end-line="92" selection-end-column="103" />
+            <state relative-caret-position="874">
+              <caret line="176" column="40" lean-forward="false" selection-start-line="176" selection-start-column="40" selection-end-line="176" selection-end-column="40" />
               <folding>
-                <element signature="e#0#5235#0" expanded="true" />
+                <element signature="e#0#9769#0" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="e#1415#1423#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -602,26 +603,11 @@
       <workItem from="1511902151301" duration="1244000" />
       <workItem from="1512162780224" duration="881000" />
       <workItem from="1512241970821" duration="179000" />
-      <workItem from="1512344014494" duration="625000" />
+      <workItem from="1512344014494" duration="2185000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UrlValidatorTest - 2017.12.03 at 15h 37m 08s.xml">
-      <configuration name="UrlValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UrlValidatorTest - 2017.12.03 at 15h 38m 24s.xml">
-      <configuration name="UrlValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UrlValidatorTest - 2017.12.03 at 15h 38m 53s.xml">
-      <configuration name="UrlValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UrlValidatorTest - 2017.12.03 at 15h 39m 14s.xml">
-      <configuration name="UrlValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UrlValidatorTest - 2017.12.03 at 15h 39m 46s.xml">
-      <configuration name="UrlValidatorTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UrlValidatorTest - 2017.12.03 at 15h 40m 25s.xml">
       <configuration name="UrlValidatorTest" configurationId="JUnit" />
     </history-entry>
@@ -637,9 +623,24 @@
     <history-entry file="UrlValidatorTest - 2017.12.03 at 15h 41m 22s.xml">
       <configuration name="UrlValidatorTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UrlValidatorTest - 2017.12.03 at 18h 50m 41s.xml">
+      <configuration name="UrlValidatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UrlValidatorTest - 2017.12.03 at 18h 56m 30s.xml">
+      <configuration name="UrlValidatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UrlValidatorTest - 2017.12.03 at 19h 01m 40s.xml">
+      <configuration name="UrlValidatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UrlValidatorTest - 2017.12.03 at 19h 02m 26s.xml">
+      <configuration name="UrlValidatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UrlValidatorTest - 2017.12.03 at 19h 02m 48s.xml">
+      <configuration name="UrlValidatorTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9633000" />
+    <option name="totallyTimeSpent" value="11193000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
@@ -712,8 +713,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5235#0" expanded="true" />
+            <element signature="e#0#9769#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#1415#1423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -739,8 +741,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5235#0" expanded="true" />
+            <element signature="e#0#9769#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#1415#1423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -758,8 +761,9 @@
         <state relative-caret-position="1273">
           <caret line="86" column="22" lean-forward="false" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
           <folding>
-            <element signature="e#0#5235#0" expanded="true" />
+            <element signature="e#0#9769#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#1415#1423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -777,8 +781,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5235#0" expanded="true" />
+            <element signature="e#0#9769#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#1415#1423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -796,8 +801,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5235#0" expanded="true" />
+            <element signature="e#0#9769#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#1415#1423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -815,8 +821,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5235#0" expanded="true" />
+            <element signature="e#0#9769#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#1415#1423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -834,8 +841,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5235#0" expanded="true" />
+            <element signature="e#0#9769#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#1415#1423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -853,8 +861,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5235#0" expanded="true" />
+            <element signature="e#0#9769#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#1415#1423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -864,8 +873,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5235#0" expanded="true" />
+            <element signature="e#0#9769#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#1415#1423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -875,8 +885,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5235#0" expanded="true" />
+            <element signature="e#0#9769#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#1415#1423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -893,8 +904,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5235#0" expanded="true" />
+            <element signature="e#0#9769#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#1415#1423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -931,21 +943,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/UrlsToVerify.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DomainValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+        <state relative-caret-position="76">
+          <caret line="67" column="21" lean-forward="false" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/UrlValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="92" column="103" lean-forward="true" selection-start-line="92" selection-start-column="103" selection-end-line="92" selection-end-column="103" />
+        <state relative-caret-position="874">
+          <caret line="176" column="40" lean-forward="false" selection-start-line="176" selection-start-column="40" selection-end-line="176" selection-end-column="40" />
           <folding>
-            <element signature="e#0#5235#0" expanded="true" />
+            <element signature="e#0#9769#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#1415#1423#0" expanded="true" />
           </folding>
         </state>
       </provider>
